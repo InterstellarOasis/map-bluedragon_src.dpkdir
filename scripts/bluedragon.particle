@@ -1,0 +1,87 @@
+bluedragon/spark
+{
+	ejector
+	{
+		particle
+		{
+	      shader sync textures/bluedragon/spark_1
+
+	      displacement ~50 ~50 ~90 ~40
+
+		velocityType 		static
+		velocityDir 		linear
+		velocity 		      0 0 1 0
+		velocityMagnitude 	100
+
+		accelerationType	      static
+		accelerationDir		linear
+		acceleration 		0 0 0 0
+		accelerationMagnitude 	0
+
+		bounce		0
+		radius		0 0 4
+		alpha		0 .5 .0
+		rotation	0 ~360 ~360
+
+		lifeTime 200
+
+		overdrawProtection
+		}
+		
+		particle
+		{
+	      shader sync textures/bluedragon/spark_2
+
+	      displacement ~50 ~50 ~90 ~40
+
+		velocityType 		static
+		velocityDir 		linear
+		velocity 		      0 0 1 0
+		velocityMagnitude 	100
+
+		accelerationType	      static
+		accelerationDir		linear
+		acceleration 		0 0 0 0
+		accelerationMagnitude 	0
+
+		bounce		0
+		radius		0 0 5
+		alpha		0 .5 .0
+		rotation	0 ~360 ~360
+
+		lifeTime 200
+
+		overdrawProtection
+		}
+		
+		particle
+		{
+	      shader sync textures/bluedragon/spark_3
+
+	      displacement ~50 ~50 ~90 ~40
+
+		velocityType 		static
+		velocityDir 		linear
+		velocity 		      0 0 1 0
+		velocityMagnitude 	100
+
+		accelerationType	      static
+		accelerationDir		linear
+		acceleration 		0 0 0 0
+		accelerationMagnitude 	0
+
+		bounce		0
+		radius		0 0 5
+		alpha		0 .5 .0
+		rotation	0 ~360 ~360
+
+		lifeTime 200
+
+		overdrawProtection
+		}
+		
+	delay 10
+	count infinite
+	period 500 - ~100%
+	}
+}
