@@ -197,28 +197,6 @@ textures/bluedragon/proto_light_cyan
 	
 }
 
-textures/bluedragon/e8_base1b
-{
-	{
-		map textures/bluedragon/e8_base1b.jpg
-		blendFunc GL_ONE GL_ZERO
-		rgbGen identity
-	}
-	{
-		map $lightmap
-		blendFunc GL_DST_COLOR GL_ZERO
-		rgbGen identity
-	}
-	{
-		map textures/bluedragon/fx.tga
-		blendFunc GL_DST_COLOR GL_SRC_COLOR
-		detail
-		rgbGen identity
-		tcGen environment
-		tcMod scale 3 3
-	}
-}
-
 textures/bluedragon/e8tinylight
 {
 	surfaceparm nomarks
@@ -408,5 +386,94 @@ textures/bluedragon/e6bsegrtflr256_s
 		map $lightmap
 		depthfunc equal
 		blendfunc filter
+	}
+}
+
+textures/bluedragon/controlpanel2
+{
+	qer_editorimage textures/bluedragon/controlpanel2.jpg
+	surfaceparm nomarks
+	{
+		map $lightmap
+		rgbGen identity
+		tcGen lightmap 
+	}
+	{
+		map textures/bluedragon/controlpanel2.jpg
+		blendfunc filter
+	}
+	{
+		map textures/bluedragon/controlpanel2_mask.jpg
+		blendfunc gl_dst_color gl_one
+		rgbGen wave square 0.5 0.5 0 1
+	}
+}
+
+textures/bluedragon/base_wall_bluemetal1b_chrome
+{
+	qer_editorimage textures/bluedragon/base_wall_bluemetal1b_shiny.tga
+
+	{
+		map textures/bluedragon/base_wall_chrome_env2.tga
+	        rgbGen identity
+		tcGen environment
+		tcmod scale .25 .25
+	}
+	
+	{
+		map textures/bluedragon/base_wall_bluemetal1b_shiny.tga
+		blendFunc GL_ONE_MINUS_SRC_ALPHA GL_SRC_ALPHA	
+		rgbGen identity
+	}
+	{
+		map $lightmap
+		blendfunc gl_dst_color gl_zero
+		rgbGen identity
+	}
+}
+
+textures/bluedragon/mtldrk0_chrome
+{
+	qer_editorimage textures/bluedragon/mtldrk0.jpg
+
+	{
+		map textures/bluedragon/base_wall_chrome_env2.tga
+	        rgbGen identity
+		tcGen environment
+		tcmod scale .1 .1
+	}
+	
+	{
+		map textures/bluedragon/mtldrk0.jpg
+		blendFunc GL_ONE GL_DST_ALPHA	
+		rgbGen identity
+	}
+	{
+		map $lightmap
+		blendfunc gl_dst_color gl_zero
+		rgbGen identity
+	}
+}
+
+textures/bluedragon/mtldrk1_chrome
+{
+	qer_editorimage textures/bluedragon/mtldrk1.jpg
+
+	{
+		map textures/bluedragon/base_wall_chrome_env2.tga
+	        rgbGen identity
+		tcGen environment
+		tcmod scale .25 .25
+	}
+	
+	{
+		map textures/bluedragon/mtldrk1.jpg
+		blendFunc GL_ONE GL_SRC_ALPHA	
+		rgbGen identity
+	}
+	{
+		map $lightmap
+		blendfunc gl_dst_color gl_zero
+		rgbGen identity
 	}
 }
