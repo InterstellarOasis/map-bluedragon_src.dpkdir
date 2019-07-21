@@ -410,23 +410,3 @@ textures/bluedragon/e6bsegrtflr256_s
 		blendfunc filter
 	}
 }
-
-textures/bluedragon/controlpanel2
-{
-	qer_editorimage textures/bluedragon/controlpanel2.jpg
-	surfaceparm nomarks
-	{
-		map $lightmap
-		rgbGen identity
-		tcGen lightmap 
-	}
-	{
-		map textures/bluedragon/controlpanel2.jpg
-		blendfunc filter
-	}
-	{
-		map textures/bluedragon/controlpanel2_mask.jpg
-		blendfunc gl_dst_color gl_one
-		rgbGen wave square 0.5 0.5 0 1
-	}
-}
